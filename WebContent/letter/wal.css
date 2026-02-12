@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'PRETENDARDJP-BLACK';
+	src: url('../fonts/PRETENDARDJP-BLACK.OTF') format('opentype');
+}
+
+@font-face {
+	font-family: 'PRETENDARDJP-BOLD';
+	src: url('../fonts/PRETENDARDJP-BOLD.OTF') format('opentype');
+}
+
+body {
+	font-family: 'PRETENDARDJP-BLACK';
+	margin: 0;
+	padding: 0;
+	background-color: #f9f9f9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-image: url('../images/46.jpg');
+	background-size: cover; 
+	background-position: center;
+}
+
+.container {
+    position: relative; 
+    border: 3px dashed #ff0000;  
+    border-radius: 6px;
+    background: white;
+    padding: 30px 40px 40px 40px; 
+    max-width: 800px;
+    width: 90%; 
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    height: 180px;
+    padding: 8px 10px 10px 10px;
+    line-height: 28px; 
+    border: 1px solid #ff0000;
+    background: linear-gradient(transparent, transparent 27px, #eeeeee 27px);
+    background-size: 100% 28px;
+    box-sizing: border-box;
+    resize: none;
+    font-size: 16px;
+    outline: none;
+    font-family: 'PRETENDARDJP-BOLD';
+    margin-top: 5px;
+}
+
+.file-upload {
+    display: flex;
+    margin-top: 20px;
+    justify-content: flex-end; 
+    width: 100%;
+}
+
+.thick-line {
+    border: none;
+    border-top: 2px dashed #ff0000;
+    height: 0;
+    margin: 20px 0;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px; 
+    height: 100px; 
+    background-image: url('../images/48.jpg'); 
+    background-size: cover;  
+    background-position: center;
+    border: 2px dotted #ff0000;
+    background-color: #fdfdfd;
+    transform: rotate(7deg); 
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.red-italic {
+	font-family: 'PRETENDARDJP-BOLD';
+}
+
+.file-name {
+	margin-top: 5px;
+	color: #666; 
+	font-size: 14px;
+	margin-right: 10px;
+	font-family: 'PRETENDARDJP-BOLD';
+}
+
+.file-label {
+	border-radius: 6px;
+	font-family: 'PRETENDARDJP-BOLD';
+	color: #666;
+	font-size: 14px;
+	margin-right: 10px;
+	cursor: pointer;
+	padding: 5px 10px;
+	border: 1px solid #ccc; 
+	background-color: #f0f0f0; 
+}
+
+.right-align {
+	text-align: right;
+	margin: 0; 
+}
+
+.red-italic {
+	color: red; 
+	font-style: italic; 
+}
+
+.underline {
+	font-family: 'PRETENDARDJP-BOLD'; 
+	font-size: 20px;
+	font-style: italic; 
+	text-decoration-color: red;
+	font-style: italic; 
+}
+
+.name-input {
+	border: none; 
+	outline: none; 
+	padding: 5px; 
+	width: 60px; 
+}
+
+.custom-font {
+	font-style: italic;
+	font-size: 20px;
+	font-family: 'PRETENDARDJP-BOLD';
+	color: black; 
+}
+
+.right-align {
+    text-align: right;
+    margin: 5px 0 0 0;
+}
+
+.floating-back-btn {
+    position: fixed;
+    left: 30px; 
+    bottom: 30px;
+    width: 55px;
+    height: 55px;
+    background-color: white;
+    color: red; 
+    border: 2px solid red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.floating-back-btn:hover {
+    background-color: red;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.floating-home-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 55px;
+    height: 55px;
+    background-color: red;
+    color: white; 
+    border: 2px solid red; 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 9999; 
+    transition: all 0.3s ease;
+}
+
+.floating-home-btn:hover {
+    background-color: white;
+    color: red;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.2);
+}
+
+.floating-home-btn .material-icons {
+    font-size: 28px;
+}
+
+@media ( max-width : 768px) {
+	.container {
+		padding: 15px;
+	}
+}

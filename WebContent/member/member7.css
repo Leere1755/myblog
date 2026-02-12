@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'PRETENDARDJP-BLACK';
+	src: url('../fonts/PRETENDARDJP-BLACK.OTF') format('opentype');
+}
+
+@font-face {
+	font-family: 'PRETENDARDJP-BOLD';
+	src: url('../fonts/PRETENDARDJP-BOLD.OTF') format('opentype');
+}
+
+body {
+	font-family: 'PRETENDARDJP-BLACK';
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column; 
+	justify-content: center;
+	align-items: center; 
+	position: relative;
+	background-image: url('../images/46.jpg');
+	background-size: cover;
+	background-position: center; 
+}
+
+.container {
+	font-style: italic;
+    font-family: 'PRETENDARDJP-BOLD';
+    background-color: white;
+    padding: 60px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 400px;
+    height: 650px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    z-index: 1;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    overflow: hidden !important;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 4px;
+    pointer-events: none;
+	z-index: 2;
+	
+    background-image: 
+        linear-gradient(to right, red 70%, rgba(255,255,255,0) 0%),
+        linear-gradient(to right, red 70%, rgba(255,255,255,0) 0%), 
+        linear-gradient(to bottom, red 70%, rgba(255,255,255,0) 0%),
+        linear-gradient(to bottom, red 70%, rgba(255,255,255,0) 0%);
+
+    background-position: 
+        left top,      
+        left bottom,   
+        left top,     
+        right top;   
+        
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    
+    background-size: 22px 3px, 22px 3px, 3px 18px, 3px 18px; 
+}
+
+.form-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;      
+    padding-right: 10px;   
+    -ms-overflow-style: none; 
+    scrollbar-width: none;     
+}
+
+.form-wrapper::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+input {
+	font-family: 'PRETENDARDJP-BOLD';
+    font-style: italic; 
+    color: black; 
+    border: none; 
+    border-bottom: 2px solid #ccc; 
+    padding: 5px; 
+    width: 100%; 
+    transition: border-color 0.3s; 
+}
+
+input:focus {
+    border-bottom: 2px solid red;
+    outline: none;
+}
+
+.input-group {
+	padding-top: 70px;
+	font-size: 1em;
+	margin-bottom: 20px; 
+	display: flex; 
+	flex-direction: column;
+	
+}
+
+.input-group label {
+	display: block; 
+	margin: 5px 0; 
+	margin-bottom: 10px; 
+	font-weight: bold; 
+}
+
+.floating-home-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 55px;
+    height: 55px;
+    background-color: #ffffff;
+    color: red;
+    border: 2px solid red;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.floating-home-btn:hover {
+    background-color: red;
+    color: #ffffff;
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.2);
+}
+
+.floating-home-btn .material-icons {
+    font-size: 28px;
+}
+
+.my-app-button-container {
+	position: static; 
+}
+
+.my-app-text {
+    font-family: 'PRETENDARDJP-BLACK';
+    font-size: 2.5em;
+    color: red;
+    text-decoration: underline;
+    font-style: italic;
+    position: fixed; 
+    left: 40px;      
+    bottom: 40px;    
+    z-index: 100;   
+}
+
+@media ( max-width : 768px) {
+	.progress-text {
+		font-size: 1.8em;
+		top: 200px;
+	}
+	.my-app-text {
+		font-size: 1.5em;
+		left: 20px;
+		bottom: 20px;
+	}
+	.container {
+		width: 45%;
+		height: 350px;
+		overflow-y: auto;
+	}
+}

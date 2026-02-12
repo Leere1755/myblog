@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'PRETENDARDJP-BLACK';
+	src: url('../fonts/PRETENDARDJP-BLACK.OTF') format('opentype');
+}
+
+@font-face {
+	font-family: 'PRETENDARDJP-BOLD';
+	src: url('../fonts/PRETENDARDJP-BOLD.OTF') format('opentype');
+}
+
+body {
+	font-family: 'PRETENDARDJP-BLACK';
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background-image: url('../images/46.jpg');
+	background-size: cover;
+	background-position: center; 
+}
+
+.container {
+	background-color: white; 
+	padding: 50px; 
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+	position: relative; 
+	max-width: 400px; 
+	margin-top: 40px;
+	margin-bottom: 10px;
+	z-index: 1; 
+	border: 1px solid #eee; 
+	border-radius: 6px; 
+}
+
+.container::after {
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	border-radius: 4px;
+	pointer-events: none;
+	background-image: linear-gradient(to right, red 70%, rgba(255, 255, 255, 0) 0%), 
+        			  linear-gradient(to right, red 70%, rgba(255, 255, 255, 0) 0%),
+		    		  linear-gradient(to bottom, red 70%, rgba(255, 255, 255, 0) 0%),
+					  linear-gradient(to bottom, red 70%, rgba(255, 255, 255, 0) 0%);
+	
+	background-position: left top, 
+        			     left bottom, 
+           				 left top, 
+        			     right top; 
+	background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+	background-size: 22px 3px, 22px 3px, 3px 18px, 3px 18px;
+}
+
+.title {
+	margin-bottom: 20px;
+	padding-top: -10px; 
+	font-family: 'PRETENDARDJP-BOLD'; 
+	font-style: italic; 
+	font-size: 1.5em; 
+}
+
+.input-group {
+	font-style: italic; 
+	font-family: 'PRETENDARDJP-BOLD'; 
+	padding-top: 70px;
+	font-size: 1em;
+	margin-bottom: 30px;
+	display: flex;
+	align-items: center;
+	font-size: 1em; 
+}
+
+.input-group label {
+	color: red;
+	font-family: 'PRETENDARDJP-BOLD';
+	font-style: italic;
+	margin-right: 10px;
+	font-weight: bold;
+	font-family: 'PRETENDARDJP-BOLD';
+}
+
+.input-group input {
+	font-style: italic; 
+	font-family: 'PRETENDARDJP-BOLD';
+	padding: 10px; 
+	border: none; 
+	border-bottom: 1px solid #ccc;
+	font-size: 1em; 
+	background-color: transparent; 
+	flex: 1;
+	outline: none; 
+}
+
+.input-group input:focus {
+	border-bottom: 1px solid red; 
+}
+
+.my-app-button-container {
+	margin-top: 30px; 
+	text-align: center; 
+}
+
+.my-app-text {
+	font-family: 'PRETENDARDJP-BLACK';
+	font-size: 2.5em;
+	color: red;
+	text-align: left;
+	margin-bottom: 4px;
+	text-decoration: underline;
+	position: absolute;
+	left: 30px;
+	bottom: 30px;
+	font-style: italic;
+}
+
+.button-wrapper {
+	display: flex;
+	justify-content: flex-end; 
+	align-items: center; 
+	gap: 15px; 
+	padding-top: 20px;
+	padding-bottom: 10px;
+	padding-right: 10px; 
+}
+
+#errorMessage {
+	color: red;
+	font-weight: bold;
+	font-size: 0.85em;
+	margin: 0; 
+	align-items: center;
+	display: flex;
+}
+
+#errorMessage::before {
+	content: '⚠️ ';
+	margin-right: 5px;
+}
+
+#errorMessage:empty {
+    display: none;
+}
+
+.floating-home-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 55px;
+    height: 55px;
+    background-color: #ffffff;
+    color: red;
+    border: 2px solid red;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.floating-home-btn:hover {
+    background-color: red;
+    color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.2);
+}
+
+.floating-home-btn .material-icons {
+    font-size: 28px;
+}
+
+@media ( max-width : 768px) {
+	.progress-text {
+		font-size: 1.8em;
+		top: 200px;
+	}
+	.my-app-text {
+		font-size: 1.5em; 
+		left: 20px; 
+		bottom: 20px; 
+	}
+	.container {
+		width: 45%; 
+		height: 350px; 
+		overflow-y: auto; 
+	}
+}
