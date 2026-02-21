@@ -1,3 +1,7 @@
+# 📄 Project Portfolio
+- 🇯🇵 **[日本語版ポートフォリオを表示する](./Draw%20my%20life%20(日本語版).pdf)**
+- 🇰🇷 **[한국어판 포트폴리오 상세보기](./Draw%20my%20life%20(한국어%20버전).pdf)**
+
 📄 Project Description
 🇰🇷 한국어 (Korean)
 JSP 기반 개인 블로그 포트폴리오
